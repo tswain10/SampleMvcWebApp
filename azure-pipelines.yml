@@ -26,7 +26,7 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'VM1_group'
     SlotName: 'production'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/testpipline'
 
 - task: NuGetCommand@2
   inputs:
@@ -47,5 +47,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
+    ArtifactName: 'testpipeline'
     publishLocation: 'Container'
