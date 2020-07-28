@@ -26,7 +26,7 @@ steps:
     deployToSlotOrASE: true
     ResourceGroupName: 'VM1_group'
     SlotName: 'production'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/testpipline'
+    packageForLinux: '$(System.ArtifactStagingDirectory)/testpipeline'
 
 - task: NuGetCommand@2
   inputs:
